@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador</title>
+<style>
+  body {
+    font-family: Arial, ;
+    text-align: center;
+  }
+  #contador {
+    font-size: 24px;
+    margin-bottom: 20px;
+         }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="contador">0</div>
+<button onclick="incrementarContador()">Incrementar</button>
+
+<script>
+  // funçao de aumentar//
+  function incrementarContador() {
+    var contadorElemento = document.getElementById('contador');
+    var contadorAtual = parseInt(contadorElemento.innerText);
+    var novoContador = contadorAtual + 1;
+    contadorElemento.innerText = novoContador;
+  }
+</script>
+
+</body>
+</html>
