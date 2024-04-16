@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+</head>
+<body>
+
+<h2>Lista de Tarefas</h2>
+
+<input type="text" id="taskInput" placeholder="Digite algumas tarefas ">
+<button onclick="addTask()">Adicionar</button>
+
+<ul id="taskList">
+    <!-- Aqui serão inseridas as tarefas -->
+</ul>
+
+<script>
+function addTask() {
+    var input = document.getElementById("taskInput");
+    var task = input.value.trim(); 
+    if (task !== "") { 
+        var listItem = document.createElement("li"); 
+        listItem.textContent = task;
+
+        document.getElementById("taskList").appendChild(listItem); 
+
+        input.value = ""; 
+    } else {
+        alert(" digite uma tarefa antes de botar"); 
+    }
+}
+</script>
+
+</body>
+</html>
